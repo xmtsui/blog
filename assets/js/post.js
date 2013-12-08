@@ -177,7 +177,7 @@ $(document).ready(function(){
     })();
 
     if(/css3-animation/.test(location.href)){
-        $("head").append("<link rel='stylesheet' type='text/css' href='/assets/css/css3-ani.css'/>");
-        $.getScript('/assets/js/css3-ani.js',function(){});
+        $("head").append("<link rel='stylesheet' type='text/css' href='/blog/assets/css/css3-ani.css'/>");
+        $.getScript('/blog/assets/js/css3-ani.js',function(){});
     }
 });

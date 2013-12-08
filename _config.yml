@@ -1,8 +1,8 @@
 # General Jekyll Config
 pygments: true
 # url: http://xmtsui.com
-url: http://xmtsui.github.io/tsui
-baseurl: /tsui
+url: http://xmtsui.github.io/blog
+baseurl: /blog
 lsi: true
 paginate: 25
 paginate_path: "/page:num"
