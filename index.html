@@ -1,0 +1,33 @@
+---
+layout: default
+title: Blog Posts
+---
+
+<div id="home">
+  <h2><i class="icon-bookmark"></i> Blog Posts</h2>
+  <ul id="blog-posts" class="posts">
+    {% and for post in paginator.posts %}
+      <li><span>{{ post.date | date_to_string }} &raquo;</span><a href="/tsui{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+	<a href="{{ '/tsui/' | prepend: site.baseurl | replace: '//', '/' }}">首页</a>
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; 前一页</a>
+  {% else %}
+    <span>&laquo; 前一页</span>
+  {% endif %}
+
+  <em>{{ paginator.page }}/{{ paginator.total_pages }}</em>
+  
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页 &raquo;</a>
+  {% else %}
+    <span>下一页 &raquo;</span>
+  {% endif %}
+  <a href="/tsui/page{{ paginator.total_pages }}">尾页</a>
+</div>
+{% endif %}

@@ -1,0 +1,41 @@
+# General Jekyll Config
+pygments: true
+# url: http://xmtsui.com
+url: http://xmtsui.github.io/tsui
+baseurl: /tsui
+lsi: true
+paginate: 25
+paginate_path: "/page:num"
+exclude: [LICENSE, CNAME, README.md, .gitignore, '_site']
+
+# Theme customization - please change from the defaults!
+theme:
+  # Color for top bar, links, etc
+  # highlight_color: '#3498db'
+  # highlight_color: '#BFE0F0'
+  highlight_color: '#aaa'
+
+  # Profile links on the left sidebar, leave blank to ignore
+  social:
+    github: xmtsui
+    bitbucket: xmtsui
+    twitter: tsui_china
+    tumblr: xmtsui
+    linkedin: xmtsui
+    gplus: +XiaominTsui
+    weibo: xmtsui
+    # hacker_news: xmtsui
+    # stackexchange: 348619
+    # stackoverflow: 348619
+    # facebook: xmtsui
+
+  # "Hi, I'm _______"
+  name: 大旻
+  email: tsui.uestc@gmail.com
+  tagline: "Hello world!"
+
+  # Google Analytics key, leave blank to ignore
+  google_analytics_key: UA-45926407-1
+
+  # Toggle "Postings are my own" disclaimer in footer
+  show_disclaimer: false
