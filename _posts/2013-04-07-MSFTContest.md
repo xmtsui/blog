@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 编程之美1
+title: 几道编程题
 categories:
-- 算法
+- Algorithm
 ---
 ##传话游戏
 ####时间限制: 1000ms 内存限制: 256MB

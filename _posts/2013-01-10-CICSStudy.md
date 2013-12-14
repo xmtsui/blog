@@ -1,8 +1,8 @@
 ---
 layout: post
-title: CICS Fundamental 
+title: CICS交易中间件介绍 
 categories:
-- 中间件
+- Middleware
 ---
 
 ##CICS基础概念	

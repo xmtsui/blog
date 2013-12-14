@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Markdown intro
+title: Markdown介绍
 categories:
-- hello
+- SCM
 ---
 
 ##Markdown 语法
