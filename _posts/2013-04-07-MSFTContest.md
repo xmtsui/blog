@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 几道编程题
+title: 几道有意思的编程题
 categories:
 - Algorithm
 ---
