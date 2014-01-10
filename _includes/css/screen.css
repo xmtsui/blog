@@ -17,7 +17,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #93C8E2;
+  color: #0088cc;
   font-family: "open sans", sans-serif;
   font-weight: 600;
   /*color: {{site.theme.highlight_color}};*/
@@ -97,7 +97,7 @@ ul.posts span {
 
 #post ul, #post ol {
   color: #A4C7D8;
-  padding-left: 2em;
+  padding-left: 1em;
 }
 
 .pagination {
@@ -162,7 +162,7 @@ nav hr {
 }
 
 #post p{
-  color: white;
+  color: rgb(209, 209, 209);
 }
 #post ul,
 #post ol {
@@ -330,7 +330,7 @@ i.fa-hn {
 
 /**************目录导航**************/
 #menuIndex {overflow:auto; height:500px; width: 230px;}
-#menuIndex a {display:block; color:rgb(154, 174, 190); padding:2px 0; }
+#menuIndex a {display:block; color:#0088cc; padding:2px 0; }
 #menuIndex a:hover {text-decoration:none;}
 #menuIndex ul {margin-bottom:10px;}
 #menuIndex ul li{font-size:18px; margin-bottom:5px;word-wrap:break-word;padding-left:10px;}
