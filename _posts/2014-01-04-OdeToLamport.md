@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LaTex
+title: Hello LaTex
 categories:
 - LaTex
 ---
