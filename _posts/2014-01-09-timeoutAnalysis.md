@@ -5,13 +5,11 @@ categories:
 - Java
 ---
 
-##问题分析
-
-###问题描述
+##问题描述
 queryTimeOut设置为60s，但发生了超时后，实际的timeout等待时间超过了60s，WHY?  
 并确认和oracle-test的timeout具体差异.
 
-###分析
+##分析
 常见的JDBC相关的Timeout类型从高到低级别有：
 >Transaction Timeout
 >>Statement Timeout
@@ -21,7 +19,7 @@ queryTimeOut设置为60s，但发生了超时后，实际的timeout等待时间�
 
 了解了上面的背景，再通过log来分析问题：
 
-### mysql log
+## mysql log
 
 {% highlight java %}
 Last packet sent to the server was 180536 ms ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException : Communications link failure
@@ -44,14 +42,14 @@ Caused by: java.net.SocketTimeoutException: Read timed out
 再来看下log里显示的时间`Last packet sent to the server was 180536 ms ago`  
 这里的超时时间为180536（不是精确的），约等于3分钟，刚好是我们的queryTimeout+SocketTimeout。
 
-### oracle log
+## oracle log
 
 {% highlight java %}
 ORA-01013: user requested cancel of current operation
 {% endhighlight %}
 
-Oracle在实现超时处理上与Mysql不太一样，没用通过子线程复制一个新的connection出来，再去向DBMS发命令，而是通过OracleTimeoutPollingThread调用OracleStatement的cancel()方法。根据目前的测试情况来看不会出现SocketTimeOut的情况。Oracle的超时参数设置可以参考这里[点击查看引用文章](http://www.dbafree.net/?p=957 "Oracle querytimeout的说明")
-关于Oracle还没有深入分析，不过可以接着参考这个DBA大牛的博客[点击查看引用文章](http://www.dbafree.net/?p=1030 "Oracle 超时参数设置")
+Oracle在实现超时处理上与Mysql不太一样，没用通过子线程复制一个新的connection出来，再去向DBMS发命令，而是通过OracleTimeoutPollingThread调用OracleStatement的cancel()方法。根据目前的测试情况来看不会出现SocketTimeOut的情况。Oracle的超时参数设置可以参考这里[*点击查看引用文章*](http://www.dbafree.net/?p=957 "Oracle querytimeout的说明")
+关于Oracle还没有深入分析，不过可以接着参考这个DBA大牛的博客[*点击查看引用文章*](http://www.dbafree.net/?p=1030 "Oracle 超时参数设置")
 
 [1]:http://www.importnew.com/2466.html "深入理解JDBC的超时设置"
 [2]:http://vdisk.weibo.com/s/Ey4_gkMI0fLp "JDBC优化的意外之旅---樊振华 28-29页"
