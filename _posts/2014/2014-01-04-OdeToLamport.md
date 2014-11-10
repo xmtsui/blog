@@ -2,7 +2,7 @@
 layout: post
 title: Hello LaTex
 categories:
-- LaTex
+- hello
 ---
 
 Hello Latex
