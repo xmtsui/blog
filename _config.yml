@@ -73,7 +73,7 @@ iLotus:
 title: tsui's blog
 subTitle: ode to Doug Lea & Trustin Lee & Pieter Hintjens
 description: jekyll blog
-url: http://localhost:4000
+url: http://xmtsui.github.io/
 feed: /feed.xml
 
 #菜单配置
