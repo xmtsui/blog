@@ -36,7 +36,7 @@ incremental: false
 #detach: false
 #port: 4000
 #host: 127.0.0.1
-baseurl: "/blog" # does not include hostname
+#baseurl: "" # does not include hostname
 
 # Outputting
 permalink: date
@@ -79,31 +79,31 @@ feed: feed.xml
 #菜单配置
 nav:
   - text: 首页
-    url: /blog/index.html
+    url: /index.html
     icon: icon-home
     class: home
   - text: 文章归档
-    url: /blog/archives.html
+    url: /archives.html
     icon: icon-reorder
     class: none
   - text: 友情链接
-    url: /blog/links.html
+    url: /links.html
     icon: icon-reorder
     class: none
   - text: 关于我
-    url: /blog/contact.html
+    url: /contact.html
     icon: icon-envelope-alt
     class: none
 
 page:
   - text: 文章分类
-    url: /blog/archives.html
+    url: /archives.html
     last: true
   - text: 友情链接
-    url: /blog/links.html
+    url: /links.html
     last: true
   - text: 关于我
-    url: /blog/contact.html
+    url: /contact.html
     last: false
 
 author:
