@@ -1,9 +1,10 @@
 # General Jekyll Config
-pygments: true
+highlighter: true
+gems: [jekyll-paginate]
 # url: http://xmtsui.com
 url: http://xmtsui.github.io/blog
 baseurl: /blog
-lsi: true
+lsi: false
 paginate: 25
 paginate_path: "/page:num"
 exclude: [LICENSE, CNAME, README.md, .gitignore, '_site']
