@@ -1,23 +1,24 @@
 ---
 layout: default
-title: 根据类别归档
+title: Archives by category
 description: jekyll blog
 keywords: java, middleware
 ---
 
 <p class="lotus-breadcrub">
-    <a href="{{ site.url }}/index.html" rel="nofollow" rel="nofollow" title="首页">Home</a>
+    <a href="{{ site.url }}/index.html" rel="nofollow" rel="nofollow" title="Home">Home</a>
     <span> &gt; </span>
      <a href="{{ site.url }}/archives.html" rel="nofollow" >Archives</a>
     <span> &gt; </span>
     {{ page.title }}
 </p>
 
-<h1 class="lotus-pagetit">根据类别归档</h1>
+<h1 class="lotus-pagetit">Archives by category</h1>
 <article id="archives">
 
 <div class="tags-expo">
   <div class="tags-expo-list">
+    Categories:&nbsp;
     {% for tag in site.categories %}
     <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
     {% endfor %}
