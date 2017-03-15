@@ -155,7 +155,7 @@ $(document).ready(function() {
             if( right < 20 ) {
                 right = 20;
             }
-            return right;
+            return right - 150;
         },
         run: function() {
             var that = this, topLink = $('<a id="' + that.nodeName + '" href="#" class="lotus-backtop"><i class="icon-circle-arrow-up"></i></a>');
