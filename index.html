@@ -12,7 +12,7 @@ keywords: java, middleware
 </section>
 <article class="lotus-article">
 {% for rpost in paginator.posts limit:1 %}
-    <h3><a href="{{site.baseurl}}/{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></h3>
+    <h3><a href="{{site.baseurl}}{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></h3>
     <p itemprop="description">{{ rpost.description }}</p>
 {% endfor %}
 </article>
