@@ -69,7 +69,7 @@ iLotus:
   columns: 1
   begin: 2011
   asset_url: /blog/assets/
-  asset_pic_url: "{{asset_url}}/pic/"
+  asset_pic_url: "{{site.iLotus.asset_url}}/pic/"
 
 #站点基础配置
 title: tsui's blog
