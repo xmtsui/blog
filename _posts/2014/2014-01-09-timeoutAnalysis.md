@@ -5,11 +5,11 @@ categories:
 - Java
 ---
 
-##问题描述
+## 问题描述
 queryTimeOut设置为60s，但发生了超时后，实际的timeout等待时间超过了60s，WHY?  
 并确认和oracle-test的timeout具体差异.
 
-##分析
+## 分析
 常见的JDBC相关的Timeout类型从高到低级别有：
 >Transaction Timeout
 >>Statement Timeout

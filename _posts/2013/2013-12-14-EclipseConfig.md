@@ -10,20 +10,20 @@ IntelliJ IDEA出来之后，我完全是被他的Dark theme吸引过去的，因
 
 由于开发环境大多基于Eclipse，再一次想到了改颜色。这次去搜了一下，结果看到国外有个大哥[Roger Dudler](http://blog.rogerdudler.com/post/38229973729/dark-juno-a-dark-ui-theme-for-eclipse-4)开发出来了个插件，可以解决这个问题。
 
-##环境需求
+## 环境需求
 * eclipse 4.2+ (目前是juno, kepler)
 
-##全局黑色主题配置
+## 全局黑色主题配置
 1. [Dark Juno插件](http://rogerdudler.github.io/eclipse-ui-themes/)  
 可以[点这里下载](https://github.com/downloads/rogerdudler/eclipse-ui-themes/com.github.eclipsecolortheme.themes_1.0.0.201207121019.zip)
 2. 解压后，把jar包拷贝到eclipse的dropins文件夹下，然后重启。
 3. 打开Preference，在General->Appearance界面选择Dark Juno
 
-##编辑区域主题配置
+## 编辑区域主题配置
 1. [Eclipse color theme 插件](http://eclipsecolorthemes.org/)  
 eclipse可以Install newsoftware 添加这个地址，然后安装http://eclipse-color-theme.github.io/update/
 2. 安装好插件后重启，打开Preference，在General->Appearance->color theme界面选择你喜欢的主题。
 
-##预览图
+## 预览图
 可以看下配置好后的预览图：darktheme+sublime text2主题
-![eclipsedarktheme](/blog/assets/pic/eclipsedarktheme.png)
+![eclipsedarktheme]({{asset_pic_url}}eclipsedarktheme.png)

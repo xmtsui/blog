@@ -5,7 +5,7 @@ categories:
 - Middleware
 ---
 
-##CICS基础概念	
+## CICS基础概念	
 1. 任务管理（Task Management）
 2. 资源管理（Resource Management）
 3. 恢复管理（Recovery Management）
@@ -17,17 +17,17 @@ categories:
 9. 程序管理（Program Management）
 10. CICS通信等
 
-##什么是CICS	
+## 什么是CICS	
 简单地说，CICS是一种中间件产品（Middleware）。它协助操作系统高效地处理业务交易，使操作系统无须关注这些复杂的交易负载，操作系统只需关注非业务的工作负载。  
 CICS最大的贡献就是深入分析了实时事务处理系统中与业务逻辑无关的、只与系统运行有关的、具有共性的需求，把上述种种复杂的软件功能归纳起来，以服务器的形式帮助应用程序实现这些功能，在整个系统的运行过程中充当应用管理的角色。数据库服务器的作用是管理系统中的所有数据，而事务服务器的作用是管理系统中所有的应用及与应用相关的资源。服务器上的应用程序请求CICS的调度服务，在CICS的管理和协调下运，并访问数据库和文件。由于CICS集中管理与应用系统有关的所有资源，因此就能以最优化的方式运行，保证达到最优的整体性能。
 
-##CICS内部架构1
+## CICS内部架构1
 CICS Region（区域）是CICS在z/OS（或OS/390）上的一个实例，是CICS系统的基本单位。Region由一组CICS系统程序、Region的所有配置信息、它所管理的各种资源（交易、程序、数据等）组成，是一个独立的CICS环境。
 Region类似于进程，有一个能执行多个线程的地址空间（Address Space）。
 Region上可以拥有许多资源，如交易、程序、终端等。
 应用程序的失败，只影响它所在的CICS Region。
 
-##CICS内部架构2	
+## CICS内部架构2	
 在CICS内部，CICS Region被划分成多组Domain（域）。每一个Domain负责具体的管理功能。每个Domain包括Management Modules、Tables和Control Blocks。
 每个Domain是按功能分割的各个部件，都有特定的资源和功能，这些资源包括交易、程序、终端等；功能包括文件访问、数据检索等。
 Domain和Domain之间通信的接口称为Gate。由于每个Domain都只能对自己控制的资源进行访问，每个Domain都有特定的功能，因此，如果一个Domain需要另外一种Service，它会通过Gate来调用另外一个Domain。
@@ -54,7 +54,7 @@ http://book.51cto.com/art/201008/216065.htm
 * XM-Transaction Manager Domain：提供交易的相关服务，如建立和终止任务、查询和清除任务、管理交易的定义和分类。
 * XS-Security Manager Domain：与外部安全系统相连接，提供CICS相关安全服务。
 
-##CICS底层
+## CICS底层
 CICS的Transaction Isolation.
 主机的交易切换机制类比进程切换机制，管理机制与Linux等通用平台应该是相通的。保存当前状态到寄存器。
 但CICS在使用时完全不用考虑内存问题，全部丢给系统来做。一个TCB一次只能跑一个Task。
@@ -72,22 +72,22 @@ address space分配多个subspace，来达到isolation的效果。isolation可�
 * SL是socket domain listener tcb
 * SO是socket domain使用的tcb，下面的多个S8 tcb用于SSL support
 
-##CICS System Programmer	
+## CICS System Programmer	
 System programmer
 >Responsible for keeping CICS (and other systems) running, uses monitoring facilitiesto observe resource usage.
 
-###CICS System Programming Interface - SPI
+## #CICS System Programming Interface - SPI
 * EXEC CICS CREATE 
 * EXEC CICS DISCARD
 * EXEC CICS INQUIRE
 * EXEC CICS PERFORM
 * EXEC CICS SET
 
-##CICS Application Programmer	
+## CICS Application Programmer	
 Application programmer
 >Writes business applications, assumes system availability but would code for error conditions.
 
-###CICS Application Programming Interface - API
+## #CICS Application Programming Interface - API
 * EXEC CICS
 * EXEC CICS PUT CONTAINER
 * EXEC CICS GET CONTAINER
