@@ -955,13 +955,9 @@ pre.prettyprint{
 /** tsui modify **/
 /** disqus */
 #disqushead{
-  font-size: 30px;
+  font-size: 24px;
   font: #065588;
   line-height: 24px;
-  margin: 1em 0;
-  color: #065588;
-}
-
-#disqus_thread{
+  margin: 0.5em 0;
   color: #065588;
 }
