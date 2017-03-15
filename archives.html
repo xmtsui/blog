@@ -50,7 +50,9 @@ keywords: java, middleware
 </article>
 
 <article>
-{% for post in site.categories %}
-    {{ post.date }} {{ post.title }}<a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+{% for category in site.categories %}
+    <li><a href="/categories/{{ category | first }}/" title="view all
+posts">{{ category | first }} {{ category | last | size }}</a>
+    </li>
 {% endfor %}
 </article>
