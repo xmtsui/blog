@@ -48,3 +48,9 @@ keywords: java, middleware
 
 
 </article>
+
+<article>
+{% for post in site.categories.[page.category] %}
+    {{ post.date }} {{ post.title }}<a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+{% endfor %}
+</article>
