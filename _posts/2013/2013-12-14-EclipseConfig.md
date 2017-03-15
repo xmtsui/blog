@@ -26,4 +26,4 @@ eclipse可以Install newsoftware 添加这个地址，然后安装http://eclipse
 
 ##预览图
 可以看下配置好后的预览图：darktheme+sublime text2主题
-![dispatcher架构](/assets/pic/eclipsedarktheme.png)
+![eclipsedarktheme](/blog/assets/pic/eclipsedarktheme.png)
