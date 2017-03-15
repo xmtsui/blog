@@ -954,10 +954,10 @@ pre.prettyprint{
 
 /** tsui modify **/
 /** disqus */
-#disqushead{
+#disqushead, #disqus_thread{
   font-size: 30px;
   line-height: 24px;
   margin: 1em 0;
-  color: {{site.iLotus.highlight_color}};
+  color: "{{site.iLotus.highlight_color}}";
 }
 
