@@ -2,7 +2,7 @@
 layout: post
 title: 几道有意思的编程题
 categories:
-- Algorithm
+- algorithm
 ---
 ## 传话游戏
 #### 时间限制: 1000ms 内存限制: 256MB

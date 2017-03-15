@@ -2,7 +2,7 @@
 layout: post
 title: Hello Markdown
 categories:
-- SCM
+- scm
 ---
 
 ## Markdown 语法

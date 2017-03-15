@@ -2,7 +2,7 @@
 layout: post
 title: 教你配置Eclipse全局黑色主题
 categories:
-- SCM
+- scm
 ---
 
 IntelliJ IDEA出来之后，我完全是被他的Dark theme吸引过去的，因为想在eclipse上配色实在是麻烦。

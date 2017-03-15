@@ -2,7 +2,7 @@
 layout: post
 title: 你好，Git 博客
 categories:
-- Hello
+- hello
 ---
 
 

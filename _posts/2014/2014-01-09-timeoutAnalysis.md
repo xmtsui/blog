@@ -2,7 +2,7 @@
 layout: post
 title: JDBC Timeout分析
 categories:
-- Java
+- java
 ---
 
 ## 问题描述

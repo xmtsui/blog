@@ -2,7 +2,7 @@
 layout: post
 title: CICS交易中间件介绍 
 categories:
-- Middleware
+- middleware
 ---
 
 ## CICS基础概念	
