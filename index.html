@@ -11,16 +11,32 @@ keywords: java, middleware
     </hgroup><!-- //violet-site -->
 </section>
 <article class="lotus-article">
-{% for rpost in paginator.posts limit:10 %}
-    <h3><a href="{{site.baseurl}}{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></h3>
+{% for rpost in paginator.posts  %}
+    <h3>{{rpost.index}}<a href="{{site.baseurl}}{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></h3>
     <p itemprop="description">{{ rpost.description }}</p>
 {% endfor %}
+
+<!-- 分页链接 -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="/page{{ paginator.previous_page }}" class="previous">Previous</a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="/page{{ paginator.next_page }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>
+
 </article>
 <section class="lotus-double fn-clear">
     <article class="article article-first">
-    <h3>最新文章</h3>
+    <h3>最近文章</h3>
         <ul>
-            {% for npost in site.posts limit:3 offset:1   %}
+            {% for npost in site.posts limit:3 offset:3   %}
             <li><a href="{{site.baseurl}}{{ npost.url }}" pubdate="{{ npost.date | date_to_utc | date: '%Y-%m-%d' }}" title="{{ npost.title }}" rel="bookmark">{{ npost.title }}</a></li>
             {% endfor %}
         </ul>
