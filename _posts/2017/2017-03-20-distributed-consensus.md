@@ -25,4 +25,6 @@ categories:
 
 
 ## refer
-1. [ 大数据技术系列----副本更新策略](http://blog.csdn.net/ni_guang2010/article/details/48493507)
+1. [大数据技术系列----副本更新策略](http://blog.csdn.net/ni_guang2010/article/details/48493507)
+2. [副本更新策略](https://segmentfault.com/a/1190000004480546)
+3. [RWN及Quorum与强一致性](https://segmentfault.com/a/1190000004499551)
