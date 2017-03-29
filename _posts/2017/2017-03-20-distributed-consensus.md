@@ -40,7 +40,7 @@ categories:
   * quorum投票复制
     要么牺牲写性能，要么牺牲读性能的一个折中方案。
     quorum是分布式系统中用来保证数据冗余与最终一致性的投票算法，其数学思想来自鸽笼原理。常见的典型实现是apache bookkeeper.
-3. paxos
+3. paxos协议
   * basic paxos
     经典的二阶段的paxos实现，《The Part-Time Parliament》有点难懂，可以看《paxos made simple》来理解。
   * multi-paxos
@@ -60,7 +60,11 @@ categories:
   * quorum-based   
     主收到请求，在部分副本确认后，即确认客户端的请求。此时主挂掉，则不会丢失数据。如果要强一致读，则需要满足W+R>N。当看重写效率，读效率要求不高时，可以W小一点，R大一点；当看重读效率，写效率要求不高时，可以W大一点，R小一点。
 
-## 未完待续
+## paxos协议
+学习paxos比较复杂，常常是因为没有一个能套用的场景，来直接对号入座。
+paxos是一个协议，严格来说不是一个算法。因为实现方式很多，不同的实现可能会结合实际的应用场景有所定制或者修改。但大的原则，是符合paxos这个协议。
+
+Paxos一致性协议是在异步通信环境中才需要的。这是一个分布式环境的一个典型场景。
 
 ## refer
 参考[readqueue-01](http://xmtsui.github.io/blog/readqueue/2017/03/14/readqueue-01.html)中所列的文章。
