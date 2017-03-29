@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [distributed-consensus overview]
+title: [distributed-consensus overview(未完待续)]
 categories:
   - ha
 ---
