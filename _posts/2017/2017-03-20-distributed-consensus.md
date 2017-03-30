@@ -27,23 +27,23 @@ categories:
 
 ## 算法介绍
 1. 2PC
-  常见的事务中间件都会支持2PC。比较经典的例子是oracle的tuxedo以及IBM的cics。
+  * 常见的事务中间件都会支持2PC。比较经典的例子是oracle的tuxedo以及IBM的cics。
 2. 3PC
-  相比2PC增加了一个准备阶段
+  * 相比2PC增加了一个准备阶段
 3. 主从复制
-  * 异步复制
+  * 异步复制  
     可靠性较差
-  * 同步复制
+  * 同步复制  
     吞吐量较差
-  * 混合模式
+  * 混合模式  
     兼顾可靠性与吞吐量
-  * quorum投票复制
+  * quorum投票复制  
     要么牺牲写性能，要么牺牲读性能的一个折中方案。
     quorum是分布式系统中用来保证数据冗余与最终一致性的投票算法，其数学思想来自鸽笼原理。常见的典型实现是apache bookkeeper.
 3. paxos协议
-  * basic paxos
+  * basic paxos  
     经典的二阶段的paxos实现，《The Part-Time Parliament》有点难懂，可以看《paxos made simple》来理解。
-  * multi-paxos
+  * multi-paxos  
     将原来两阶段过程简化为了一阶段，从而加快提交速度。但Multi-Paxos要求在各个Proposer中有唯一的Leader。而且leader在提交proposal之前，必须要经历二阶段的准备，达到要求的一致状态。
 4. raft
   * 易于理解的，同时易于工程化实践的分布式一致性算法。其主要包括领导选取（leader election）、日志复制（log replication）、安全（safety）和成员变化（membership changes）四个部分。建议看[raft经典动画](http://thesecretlivesofdata.com/raft/)来了解。 需要注意的是Raft协议强调日志的连续性，multi-paxos则允许日志有空洞。
