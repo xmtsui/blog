@@ -66,5 +66,15 @@ paxos是一个协议，严格来说不是一个算法。因为实现方式很多
 
 Paxos一致性协议是在异步通信环境中才需要的。这是一个分布式环境的一个典型场景。
 
+## raft协议
+* [raft的主页](https://raft.github.io/)
+* [raft的论文](https://raft.github.io/raft.pdf)
+* [raft的实现](https://raft.github.io/#implementations)
+  * [hortonwork - ratis](https://github.com/hortonworks/ratis)
+    * [ratis wiki](https://wiki.apache.org/incubator/RatisProposal)
+  * [apache incubator - ratis](https://github.com/apache/incubator-ratis)
+  * [personal - jraft](https://github.com/andy-yx-chen/jraft)
+  * [team - jraft](https://github.com/datatechnology/jraft)
+
 ## refer
 参考[readqueue-01](http://xmtsui.github.io/blog/readqueue/2017/03/14/readqueue-01.html)中所列的文章。
